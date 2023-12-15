@@ -15,7 +15,20 @@ layout = html.Div([dbc.Container([
     ),
     dbc.Row(
         dbc.Col(
-            dbc.CardImg(src="assets/pa.jpeg", style={"height": "350px", "object-fit": "contain"}, top=True),
+            dmc.Paper(
+                dmc.Center(
+                    dmc.Stack([
+                        dbc.CardImg(src="assets/pa.jpeg", style={"height": "350px", "object-fit": "contain"}, top=True),
+                        dmc.Text('Paul F. Harris', weight=500, size='xl', style={"marginBottom": "0.25rem"}),
+                        dmc.Text('March 16, 1927 - December 12, 2023', size='md', style={"color": "#555"}),
+                        html.A('Obituary', href='https://www.magnerfuneralhome.com/obituary/Paul-Harris', target="_blank", style={"color": "#007bff", "fontWeight": "bold"}),
+                        html.A('Spotify Playlist', href='https://open.spotify.com/playlist/0Vm3SZZFZVqkc9sh3L78Kl?si=5i-YMQSkTmOCmUW92gTQ_Q&pi=u-QSGMFhGuRpmg', target="_blank", style={"color": "#007bff", "fontWeight": "bold"}),
+                    ], spacing='sm'),
+                ),
+                style={"padding": "1rem", "marginBottom": "1rem", "width": "30%"}
+            ),
+            width=12,
+            style={"display": "flex", "justifyContent": "center"}  # Center the Paper in the column
         )
     ),
     dbc.Row([
@@ -33,7 +46,7 @@ layout = html.Div([dbc.Container([
             dbc.Card([
                 dbc.CardBody([
                     html.H4("Slideshow", className="card-title"),
-                    html.P("View our slideshow", className="card-text"),
+                    html.P("View the slideshow", className="card-text"),
                     dbc.Button("Go to Slideshow", href="/slideshow", color="primary"),
                 ])
             ]),
@@ -46,7 +59,7 @@ layout = html.Div([dbc.Container([
                     html.P("Upload your images", className="card-text"),
                     dbc.Button("Go to Upload", href="/upload", color="primary"),
                 ])
-            ]),
+            ], className="mb-4"),
             md=4
         )
     ], className="mb-4")
