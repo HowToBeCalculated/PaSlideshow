@@ -25,7 +25,7 @@ layout = html.Div([dbc.Container([
                         html.A('Spotify Playlist', href='https://open.spotify.com/playlist/0Vm3SZZFZVqkc9sh3L78Kl?si=5i-YMQSkTmOCmUW92gTQ_Q&pi=u-QSGMFhGuRpmg', target="_blank", style={"color": "#007bff", "fontWeight": "bold"}),
                     ], spacing='sm'),
                 ),
-                style={"padding": "1rem", "marginBottom": "1rem", "width": "30%"}
+                style={"padding": "1rem", "marginBottom": "1rem", "width": "30%", "minWidth": "300px"}
             ),
             width=12,
             style={"display": "flex", "justifyContent": "center"}  # Center the Paper in the column

@@ -84,6 +84,7 @@ layout = html.Div([
                 'overflow': 'hidden'  # To handle media larger than the container
             }
         ),
+        dmc.Text('Visit www.paulfharris.com to add pictures', size='md', weight=500, style={'textAlign': 'center'}),
         dcc.Interval(
             id='interval-component',
             interval=IMAGE_DURATION,
