@@ -5,6 +5,9 @@ import os
 
 app = Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
+# needed for gunicorn/wsgi to connect
+server = app.server
+
 app.layout = dash.page_container
 
 if __name__ == '__main__':
